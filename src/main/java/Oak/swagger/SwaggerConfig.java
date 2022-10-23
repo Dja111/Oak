@@ -1,2 +1,4 @@
-package Oak.swagger;public class SwaggerConfig {
+package Oak.swagger;
+
+public class SwaggerConfig {
 }
