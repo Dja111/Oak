@@ -1,0 +1,17 @@
+#spring.datasource.driver-class-name=org.mongo
+spring:
+  application:
+    name: oakApp
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration
+    servlet:
+      multipart:
+        enabled: true
+        max-file-size: 10000MB
+        max-request-size: 10000MB
+  datasource:
+    url: jdbc:mongodb://localhost:27017/oak;DB_CLOSE_DELAY=-1
+    username: mongo
+    password: mongo
+server:
+  port: 8081
