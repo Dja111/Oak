@@ -13,7 +13,7 @@ import java.net.UnknownHostException;
 
 public class OakRepositoryBuilder {
 
-    //public static Logger logger = LoggerFactory.getLogger(OakRepositoryBuilder.class);
+    public static Logger logger = LoggerFactory.getLogger(OakRepositoryBuilder.class);
 
     public static Repository getRepo(String host, final int port) throws UnknownHostException {
         String uri = "mongodb://" + host + ":" + port;
@@ -21,7 +21,7 @@ public class OakRepositoryBuilder {
         System.setProperty("oak.documentMK.disableLeaseCheck", "true");
         DocumentNodeStore ns = new DocumentMK.Builder().setMongoDB(uri, "oak_demo", 16).getNodeStore();
         Repository repo = new Jcr(new Oak(ns)).createRepository();
-        //logger.info("oak.documentMK.disableLeaseCheck=" + System.getProperty("oak.documentMK.disableLeaseCheck"));
+        logger.info("oak.documentMK.disableLeaseCheck=" + System.getProperty("oak.documentMK.disableLeaseCheck"));
         return repo;
     }
 }
