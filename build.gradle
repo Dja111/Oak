@@ -24,16 +24,23 @@ dependencies {
 
     // Jackrabbit OAK
     implementation group: "org.apache.jackrabbit", name: "jackrabbit-jcr-commons", version: "2.21.12"
-    implementation group: "org.apache.jackrabbit", name: "oak-store-document", version: "1.44.0"
+    //implementation group: "org.apache.jackrabbit", name: "oak-store-document", version: "1.44.0"
     implementation group: "org.apache.jackrabbit", name: "oak-jcr", version: "1.44.0"
     compileOnly group: "javax.jcr", name: "jcr", version: "2.0"
 
-    //implementation group: "org.apache.jackrabbit", name: "oak-store-document", version: "1.8.2"
+    implementation group: "org.apache.jackrabbit", name: "oak-store-document", version: "1.8.2"
 
 
-// Mongo
+    // Mongo
     implementation group: "org.mongodb", name: "mongo-java-driver", version: "3.12.11"
     implementation group: "org.mongodb", name: "mongodb-driver-core", version: "4.6.1"
+
+    //embedded MongoDb
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.7.5'
+    // https://mvnrepository.com/artifact/de.svenkubiak/embedded-mongodb
+    implementation group: 'de.svenkubiak', name: 'embedded-mongodb', version: '6.0.10'
+
 }
 
 test {
