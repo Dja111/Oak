@@ -10,7 +10,6 @@ COPY build/libs/Oak-1.0-SNAPSHOT.jar oakApp.jar
 
  #podman run --rm -it eclipse-temurin:17-jre-alpine /bin/sh
  #
- #[18.10 12:34] Müller, Henning
  #cat /etc/passwd
 USER nobody
 
